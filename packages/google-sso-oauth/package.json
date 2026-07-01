@@ -1,0 +1,44 @@
+{
+  "name": "@hlao-adapter/google-sso-oauth",
+  "version": "0.1.0",
+  "description": "Google OAuth 2.0 authorization-code flow with server-side sessions. Express-compatible middleware for HLAO deployments where the app owns the login flow.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelbyler272/hlao-adapters.git",
+    "directory": "packages/google-sso-oauth"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cookie": "^1.0.2",
+    "jose": "^5.9.6",
+    "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "express": "^4.17.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "express": "^4.21.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}

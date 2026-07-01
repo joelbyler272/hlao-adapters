@@ -1,0 +1,38 @@
+{
+  "name": "@hlao-adapter/google-sso-oidc",
+  "version": "0.1.0",
+  "description": "OIDC ID-token verification against Google's JWKs. Reference implementation of an HLAO verifyActor source for backends that receive a Google ID token from a client.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelbyler272/hlao-adapters.git",
+    "directory": "packages/google-sso-oidc"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "jose": "^5.9.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}

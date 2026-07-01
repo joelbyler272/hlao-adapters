@@ -1,0 +1,38 @@
+{
+  "name": "@hlao-adapter/google-sso-directory",
+  "version": "0.1.0",
+  "description": "Google Workspace Directory API lookup via service account with domain-wide delegation. Reference implementation of an HLAO verifyActor source for deployments that verify actors by checking membership in a Workspace directory.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelbyler272/hlao-adapters.git",
+    "directory": "packages/google-sso-directory"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "jose": "^5.9.6",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
