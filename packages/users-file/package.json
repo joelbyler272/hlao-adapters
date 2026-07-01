@@ -1,0 +1,37 @@
+{
+  "name": "@hlao-adapter/users-file",
+  "version": "0.1.0",
+  "description": "File-backed HLAO verifyActor source: a static JSON list of allowed principals loaded from disk. Suitable for small deployments and CI environments where no identity provider is wired up.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelbyler272/hlao-adapters.git",
+    "directory": "packages/users-file"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
